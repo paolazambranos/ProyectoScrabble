@@ -1,5 +1,7 @@
 package Scrabble;
 import java.util.LinkedList;
+//importar la clase json.simple;
+
 
 import java.util.Scanner;
 
@@ -7,7 +9,8 @@ public class Jugador {
     private String alias;
     private String email;
     Scanner opc = new Scanner(System.in);
-
+    private static LinkedList<String> listaAlias = new LinkedList<>();
+    private LinkedList<Character> listFichas = new LinkedList<>();
 
 
     public Jugador(String alias, String email) {
@@ -15,19 +18,14 @@ public class Jugador {
         this.email = email;
     }
 
-    public String nombre_usuario(String nombre, Scanner opc){
-        System.out.println("Ingrese el alias que desea usar en esta partida: ");
-        nombre = opc.next();
-        return nombre;
+
+    public String getAlias() {
+        return alias;
     }
 
-    public String leertxt (String nombre, String correo){
-        //forma de leer el txt. INVESTIGAR
-        return nombre;
+
+    public String getEmail() {
+        return email;
     }
 
-    public void lista(String nombre){
-        LinkedList<String> jugadores= new LinkedList<String>();
-
-    }
 }
